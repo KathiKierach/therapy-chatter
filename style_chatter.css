@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  font: 14px Lato, sans-serif;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: #669999;
+}
+
+/*---------------------------------------*/
+/*---------  Styling Hintergrund  -------*/
+/*---------------------------------------*/
+
+#bgImg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Specific to this particular image */
+  #bgImg {
+    left: 50%;
+    margin-left: -512px;
+    /* 50% */
+  }
+}
+
+/*---------------------------------------*/
+/*---------  Header  --------------------*/
+/*---------------------------------------*/
+
+#header {
+  background-color: #324f51;
+  height: 3.5rem;
+  text-align: center;
+  padding: 10px 0 15px 0;
+}
+
+#header h1 {
+  color: white;
+}
+
+/*---------------------------------------*/
+/*---------  Styling Chatfenster  -------*/
+/*---------------------------------------*/
+
+#wrapper {
+  max-width: 650px;
+  background-color: #BBC6C6;
+  max-height: 100vh;
+  margin: auto;
+  z-index: 1;
+  position: relative;
+  border-radius: 0 0 15px 15px;
+}
+
+#chatwindow {
+  min-height: 40vh;
+  max-height: 70vh;
+  overflow: auto;
+}
+
+.speech {
+  padding: 0.6rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.speech.left {
+  background-color: white;
+  float: left;
+  max-width: 60%;
+  margin-right: 30%;
+  margin: 0.2rem 0 0.2rem 5px;
+  display: block;
+}
+
+.speech.right {
+  background-color: rgb(214, 245, 198);
+  float: right;
+  max-width: 60%;
+  margin-left: 30%;
+  margin: 0.2rem 5px 0.2rem 0;
+  display: block;
+  text-align: left;
+}
+
+/*---------------------------------------*/
+/*--------- Texteingabe-Feld  --  -------*/
+/*---------------------------------------*/
+
+#textInput {
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: #324f51;
+  padding: 1rem 0px 1.2rem 0;
+  border-radius: 0 0 15px 15px;
+}
+
+#inputField {
+  width: 80%;
+  line-height: 1.3rem;
+  padding: 5px;
+  background-color: white;
+  float: left;
+  margin-left: 4%;
+  display: block;
+  border-radius: 5px;
+}
+
+/*wählt das Attribut*/
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+
+#sendBtn {
+  width: 9%;
+  min-height: 2rem;
+  margin-left: 1%;
+  float: left;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*---------------------------------------*/
+/*--------- Styling-Zusatzbuttons -------*/
+/*---------------------------------------*/
+
+#botUmstellen {
+  margin: auto;
+  max-width: 70%;
+  padding: 4px;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+#btnWrap {
+  max-width: 100%;
+  min-height: 5rem;
+  margin: auto;
+  text-align: center;
+  display: table;
+}
+
+#botUmstellen .btnGespr {
+  background-color: #66cc66;
+  font-size: 1.4rem;
+  max-width: 35%;
+  min-height: 5rem;
+  float: left;
+  margin: 0.8rem 0.5rem 0 0.5rem;
+  padding: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5), 2px 0px 10px rgba(112, 112, 112, 0);
+}
+
+/*---------------------------------------*/
+/*---------  freie Klassen        -------*/
+/*---------------------------------------*/
+
+.clearfixAfter:after {
+  clear: both;
+}
+
+.clearfix {
+  clear: both;
+  display: table;
+}
+
+/*---------------------------------------*/
+/*---------  Media Query ~~~<3    -------*/
+/*---------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+  #inputField {
+    width: 95%;
+    float: none;
+    margin: auto;
+  }
+  #sendBtn {
+    width: 25%;
+    display: block;
+    float: none;
+    margin: auto;
+    margin-top: 0.5rem;
+  }
+  #btnWrap {
+    display: block;
+  }
+  #botUmstellen {
+    margin: auto;
+    max-width: 90%;
+    padding: 4px;
+    margin-top: 0.5rem;
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+  }
+  #botUmstellen .btnGespr {
+    max-width: 70%;
+    min-height: 2rem;
+    margin: 0.5rem auto 0 auto;
+    padding: 0.5rem;
+    border-radius: 5px;
+    float: none;
+    display: block;
+  }
+}
+
+/*Ende Media-Query, nicht Löschen Kathi
